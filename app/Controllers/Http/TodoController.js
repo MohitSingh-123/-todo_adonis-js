@@ -13,6 +13,11 @@ class TodoController {
           data: todo
         })
       }
+
+      async index() {
+        const todos = await Todo.all()
+        return todos
+      }
 }
 
 module.exports = TodoController
