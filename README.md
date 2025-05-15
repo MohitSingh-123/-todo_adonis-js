@@ -1,6 +1,6 @@
-# Adonis fullstack application
+# Adonis backend API
 
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
+This is the CRUD opeartion for todo  application using  AdonisJs;
 
 1. Bodyparser
 2. Session
