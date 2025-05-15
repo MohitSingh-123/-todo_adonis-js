@@ -30,6 +30,14 @@ class TodoController {
          await todo.save();
          return todo;
     }
+
+    async destroy({params,response}){
+
+        const todo=await Todo.findOrFail(params.id)
+      //  response.status(204)
+        await todo.delete()
+        return todo;
+    }
 }
 
 module.exports = TodoController
