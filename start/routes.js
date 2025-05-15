@@ -20,3 +20,4 @@ const Route = use('Route')
 
 Route.post('/api/todos','TodoController.store')
 Route.get('/api/todos','TodoController.index')
+Route.put('/api/todos/:id','TodoController.update')

@@ -18,6 +18,18 @@ class TodoController {
         const todos = await Todo.all()
         return todos
       }
+
+
+    async update({params,request}){
+
+        
+        const body=request.all();
+        const todo=await Todo.findOrFail(params.id)
+        todo.task=body.task
+        
+         await todo.save();
+         return todo;
+    }
 }
 
 module.exports = TodoController
