@@ -16,4 +16,9 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.on('/').render('welcome')
+//Route.on('/').render('welcome')
+
+Route.post('/api/todos','TodoController.store')
+Route.get('/api/todos','TodoController.index')
+Route.put('/api/todos/:id','TodoController.update')
+Route.delete('/api/todos/:id','TodoController.destroy')
