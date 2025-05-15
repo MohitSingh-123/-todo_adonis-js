@@ -8,7 +8,7 @@ class TodosSchema extends Schema {
     this.create('todos', (table) => {
       table.increments()
       table.string('task').notNullable()
-      table.boolean('is_completed').defaultTo(false)
+      table.boolean('completed').defaultTo(false)
       table.timestamps()
     })
   }

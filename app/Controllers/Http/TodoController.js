@@ -38,6 +38,18 @@ class TodoController {
         await todo.delete()
         return todo;
     }
+
+    async complete({ params, response }) {
+        
+        const todo = await Todo.findOrFail(params.id)
+          todo.completed = true
+          await todo.save()
+    
+          return {
+            message: 'Todo marked as complete',
+            todo
+          }
+    }
 }
 
 module.exports = TodoController
